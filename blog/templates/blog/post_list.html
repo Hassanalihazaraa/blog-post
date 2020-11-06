@@ -2,16 +2,14 @@
 
 {% block content %}
 
-    {% for post in posts %}
+    {% for post in queryset %}
         <div class="post">
-
             <div class="date">
                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             </div>
-
             <p>{{ post.text|linebreaksbr }}</p>
             <a class="btn btn-default" href="{% url 'post_full_detail' pk=post.pk %}"><span
-                    class="glyphicon glyphicon-plus"></span>Read more</a>
+                    class="glyphicon glyphicon-plus"></span> Read more</a>
         </div>
     {% endfor %}
 
