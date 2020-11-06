@@ -10,8 +10,9 @@
             </div>
 
             <p>{{ post.text|linebreaksbr }}</p>
-
+            <a class="btn btn-default" href="{% url 'post_full_detail' pk=post.pk %}"><span
+                    class="glyphicon glyphicon-plus"></span>Read more</a>
         </div>
     {% endfor %}
-    
+
 {% endblock %}
